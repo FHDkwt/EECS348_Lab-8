@@ -1,24 +1,18 @@
 # Makefile for EECS 348 Lab 8
-
 # Default target
 all: build
-
-# Build the project
+# Building project
 build:
 	mkdir -p build
 	cd build && cmake .. && make
-
-# Run the main program
+# Run main program
 run: build
 	./build/matrix_operations
-
-# Run the tests
+# Run tests
 test: build
 	./build/tests/matrix_tests
-
 # Clean up
 clean:
 	rm -rf build
-
 # Phony targets
 .PHONY: all build run test clean
